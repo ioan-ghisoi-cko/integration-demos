@@ -1,0 +1,254 @@
+/* Here you can style your payment area */
+#payment {
+	grid-area: payment;
+	background: #f8f8f8;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#wrapper {
+	width: 50%;
+	border-radius: 4px;
+	border: 1px solid #e8e8fb;
+	border-top-color: rgb(232, 232, 251);
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-right-color: rgb(232, 232, 251);
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-bottom-color: rgb(232, 232, 251);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-left-color: rgb(232, 232, 251);
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-image-source: initial;
+	border-image-slice: initial;
+	border-image-width: initial;
+	border-image-outset: initial;
+	border-image-repeat: initial;
+}
+
+#integration-option {
+	margin: 30px 30px 30px 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#pay-now-button {
+	background: #023a51;
+	color: #02cc8b;
+	margin-top: 10px;
+	font-size: 14px;
+	box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+	border-radius: 4px;
+	border: 0;
+	font-weight: 700;
+	width: 100%;
+	height: 40px;
+	outline: none;
+	outline-style: none;
+	cursor: pointer;
+	transition: all 0.15s ease;
+}
+
+body {
+	background: #fff;
+	height: 100vh;
+	margin: 0;
+	display: grid;
+	grid-template-columns: 30% 70%;
+	grid-template-rows: 80px auto;
+	grid-template-areas: "products nav" "products payment";
+}
+
+header {
+	grid-area: nav;
+	display: grid;
+	background: #f8f8f8 url(../imgs/logo.svg) center center no-repeat;
+	background-size: 45px auto;
+	grid-template-columns: .5fr 1fr .5fr;
+	grid-template-rows: 1fr;
+	grid-auto-flow: column;
+	grid-template-areas: ". logo .";
+	border-bottom: 1px solid #f3f3ff;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(243, 243, 255);
+}
+
+.item {
+	display: flex;
+	flex-direction: row;
+	padding: 10px 30px 10px 30px;
+}
+
+.item .image {
+	display: block;
+	width: 80px;
+	height: 80px;
+	margin-right: 15px;
+	background: #f6f9fc;
+	border-radius: 3px;
+}
+
+.item .label {
+	flex: 1;
+	text-align: left;
+}
+
+.item .product {
+	color: #023a51;
+}
+
+.item .sku {
+	font-size: 14px;
+	color: #609aab;
+}
+
+.item .price {
+	color: #02cc8b;
+	font-weight: bold;
+}
+
+.breakdown-item {
+	display: flex;
+	flex-direction: row;
+	padding: 0px 30px 5px 30px;
+}
+
+.breakdown-item .title {
+	flex: 1;
+	text-align: left;
+	color: #023a51;
+}
+
+.breakdown-item .value {
+	flex: 1;
+	text-align: right;
+	font-weight: bold;
+	color: #02cc8b;
+}
+
+#message {
+	border-bottom: 1px solid #f3f3ff;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(243, 243, 255);
+}
+
+#message .helper {
+	display: flex;
+	flex-direction: column;
+	padding: 10px 30px 10px 30px;
+	margin: 20px 30px 30px 30px;
+	background: #f8f8f8;
+}
+
+#message .helper .card-details {
+	display: flex;
+	flex-direction: row;
+}
+
+#demo-title {
+	font-size: 18px;
+	font-weight: bold;
+	color: #023a51;
+	display: flex;
+	text-align: left;
+}
+
+#message .helper .card {
+	flex: 3;
+	text-align: left;
+}
+
+#message .helper .date {
+	flex: 1;
+	text-align: left;
+}
+
+#message .helper .cvv {
+	flex: 1;
+	text-align: right;
+}
+
+.helper .title {
+	color: #023a51;
+}
+
+.helper .value {
+	word-spacing: 5px;
+	color: #02cc8b;
+}
+
+#products {
+	grid-area: products;
+	display: grid;
+	grid-template-rows: 80px 1fr 1fr 1fr 1fr 2fr 2fr;
+	grid-template-areas: "title title" "products products" "products products" "products products" "breakdown breakdown"
+		"message message" "total total";
+}
+
+#product-title {
+	grid-area: title;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	width: 100%;
+	border-bottom: 1px solid #f3f3ff;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(243, 243, 255);
+}
+
+#product-list {
+	grid-area: products;
+	display: grid;
+	align-items: center;
+	grid-template-rows: repeat(3, 1fr);
+	border-bottom: 1px solid #f3f3ff;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(243, 243, 255);
+}
+
+#breakdown {
+	grid-area: breakdown;
+	border-bottom: 1px solid #f3f3ff;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(243, 243, 255);
+}
+
+#message {
+	grid-area: message;
+}
+
+#total {
+	grid-area: total;
+}
+
+#total .breakdown-item .title {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+#total .breakdown-item .value {
+	font-size: px;
+	color: #02cc8b;
+	font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		grid-template-columns: 100%;
+		grid-template-rows: 80px calc(100vh - 80pxs);
+		grid-template-areas: "nav" "payment";
+	}
+}
